@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Monday{% endblock title %}
+
+{% block content %}
+    <div class="card">
+      <h1>Мой список дел на понедельник</h1>
+
+      <ol>
+        {% for task in tasks %}
+          <li>{{ task }}</li>
+        {% endfor %}
+      </ol>
+
+      <a href="{% url 'home' %}">Вернуться</a>
+    </div>
+{% endblock content %}

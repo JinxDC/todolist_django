@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="nav">
+        <h1>
+            Мой список задач на неделю
+        </h1>
+        <div class="nav-links">
+            <a href="{% url 'home' %}" class="nav-link">
+                Home
+            </a>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

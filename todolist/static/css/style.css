@@ -1,0 +1,112 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-blue: #d5eaff;
+  --color-purple: #c3bafa;
+  --color-green: #c8daaa;
+  --color-yellow: #fddd9a;
+  --color-pink: #f6bdd9;
+
+  --border-width: 4px;
+  --border-radius: 8px; /* сделаем мягче */
+  --shadow-offset: 8px;
+  --shadow-hover-offset: 4px; /* Новая переменная для эффекта наведения */
+
+  --bg: #f5f5f5;
+  --card-bg: var(--color-white);
+  --border-color: var(--color-black);
+  --shadow-color: var(--color-black);
+
+  --h1-color: var(--color-black);
+  --h2-color: var(--color-black);
+
+  --nav-bg: var(--bg);
+  --nav-accent: var(--color-blue);
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Courier New', monospace;
+  line-height: 1.4;
+  padding: 20px;
+}
+
+/* Общий стиль для всех ссылок */
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.card {
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  padding: 2rem;
+  background-color: var(--card-bg);
+  max-width: 900px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Указываем, что анимируем */
+}
+
+.card:hover {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: 0 0 0 var(--shadow-color);
+}
+
+.card h1, .card h2, .card h3 {
+  color: var(--h1-color);
+  margin-bottom: 1rem;
+}
+
+.card ol, .card ul {
+  padding-left: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--nav-bg);
+    border-bottom: var(--border-width) solid var(--border-color);
+    box-shadow: 0 var(--shadow-offset) 0 var(--shadow-color);
+    margin-bottom: 2rem;
+}
+
+/* Обновляем стиль для .nav-link */
+.nav-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-black);
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--bg);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-black);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: translate(var(--shadow-offset), var(--shadow-offset));
+  box-shadow: 0 0 0 var(--shadow-color);
+}
+
+.nav-link{
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-black);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: var(--border-width) solid var(--border-color);
+    background-color: var(--bg); /* Исправлена ошибка в синтаксисе */
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--color-black);
+    transition: all 0.2s ease;
+}

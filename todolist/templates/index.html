@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+    <div class="card">
+        <h1>
+            Дни недели:
+        </h1>
+        <ol>
+            {% for day in days %}
+            <li>
+                <a href="{{day}}">
+                    {{day}}
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock content %}
